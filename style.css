@@ -1,6 +1,7 @@
 /* body, links, headers */
 body {
     background:#fff;
+    overflow:visible;
     height:100%;
     width:100%;
     margin:0;
@@ -12,12 +13,20 @@ body {
 a {
     color:#293462;
     text-decoration:none;
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
 }
-
-nav a {
-    line-height: 1.2;
-    padding:6px;
-}
+  nav a {
+      line-height: 1.2;
+      padding:6px;
+  }
+  nav a:hover {
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+    text-decoration: none
+  }
 
 h1 {
   color: #505bda;
@@ -101,9 +110,9 @@ header nav {
       height:100%;
       text-align:center;
     }
-    .category img {
-      margin: 0 auto 10px auto;
-      width:600px;
+    .cover {
+      margin:50px;
+      max-width:500px;
     }
 
   /* double column */
@@ -168,31 +177,28 @@ header nav {
 }
 
 @media screen and (max-width: 64em) {
-.single {
-  margin:200px 0 50px 0;
-}
-  #projects {
-    display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content: space-around;
+  .cover {
+    width:450px;
+  }
+  .single {
+    margin:200px 0 50px 0;
   }
 
   .double {
     margin: 200px 0 100px 0;
     display:flex;
-      flex-drection:column;
+      flex-direction:column;
       flex-wrap:wrap;
-  }
+    }
 
-  .double-left{
-    width:300px;
-  }
+    .double-left{
+      width:300px;
+    }
 
   .triple {
     display:flex;
       flex-direction:column;
       flex-wrap:wrap;
       justify-content: space-between;
-  }
+    }
 }
