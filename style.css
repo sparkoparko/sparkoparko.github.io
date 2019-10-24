@@ -1,5 +1,6 @@
 /* body, links, headers */
 body {
+    color: #3c4245;
     background:#fff;
     overflow:visible;
     height:100%;
@@ -50,7 +51,6 @@ h2 {
 }
 
 p {
-  color:#3c4245;
   margin-bottom:5px;
 }
 
@@ -92,6 +92,10 @@ header nav {
 }
   .margin {
     margin-top:150px;
+  }
+  .wrap {
+    float:left;
+    margin:50px;
   }
   /* section animation */
   section {
