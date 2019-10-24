@@ -1,16 +1,12 @@
 /* body, links, headers */
 body {
     background:#fff;
-    overflow:visible;
     height:100%;
     width:100%;
     margin:0;
+    padding:0;
     font-size:18px;
     font-family:"Avenir", sans-serif;
-
-    display:flex;
-      align-items:center;
-      justify-content:center;
 }
 
 a {
@@ -79,8 +75,11 @@ header nav {
 }
 
 /* section */
-section {
-  width:80%;
+#content {
+  min-height:100vh;
+  display:flex;
+    justify-content:center;
+    align-items:center;
 }
   /* section animation */
   section {
@@ -94,14 +93,12 @@ section {
 
   /* single column*/
   .single {
-    display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
+    flex-direction:column;
   }
     /* index.html */
-    #bio {
+    .bio {
       max-width:450px;
+      height:100%;
       text-align:center;
     }
     .category img {
