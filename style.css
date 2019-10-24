@@ -58,7 +58,7 @@ img {
 header {
   background: #fff;
   width:100%;
-  position:fixed;
+  position:absolute;
   height:46px;
   top:0px;
 
@@ -88,7 +88,8 @@ section {
   }
 
   .center {
-      position:fixed;
+      position:absolute;
+      overflow:scroll;
       top:50%;
       left:50%;
       transform:translate(-50%, -50%);
@@ -111,20 +112,8 @@ section {
       max-width:450px;
       text-align:center;
     }
-    #bio img {
-      width:100px;
-    }
-    /* projects */
-    #section {
-      max-width:80%;
-      text-align:left;
-    }
-    #section img {
-      width:500px;
-      margin: 0 auto 25px;
-    }
-    #section h1 {
-      margin-top:0;
+    .category img {
+      margin: 0 auto 10px auto;
     }
 
   /* double column */
@@ -239,7 +228,7 @@ section {
 /* footer */
 footer {
     width:100%;
-    position:fixed;
+    position:absolute;
     bottom:0px;
     text-align:center;
     padding:20px;
