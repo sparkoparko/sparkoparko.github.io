@@ -170,8 +170,6 @@ header nav {
 }
 
 .hide {
-  display:none;
-  overflow:hidden;
   animation:fade 1.6s 1 forwards;
 }
 
