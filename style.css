@@ -21,6 +21,8 @@ Version 1.00
 body {
     background:#fff;
     overflow:visible;
+    height:100%;
+    width:100%;
     margin:0;
     font-size:18px;
     font-family:"Avenir", sans-serif;
@@ -104,6 +106,13 @@ section {
     animation:fade 1.6s 1 forwards;
   }
 
+  .center {
+      position:fixed;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+  }
+
   @keyframes fadein {
     from { opacity:0; }
     to { opacity: 1;}
@@ -111,7 +120,6 @@ section {
 
   /* single column*/
   .single {
-    margin-top:100px;
     display:flex;
       flex-direction:column;
       justify-content:center;
