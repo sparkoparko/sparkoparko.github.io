@@ -57,6 +57,9 @@ p {
 img {
   display:block;
 }
+    .resize {
+        width:800px;
+    }
 
 /* navigation */
 header {
