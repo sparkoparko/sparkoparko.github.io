@@ -55,20 +55,18 @@ p {
 }
 
 img, video {
-  display:block;
+  margin:25px 0;
   }
-    .resize-wide {
+    .resize {
       max-width:100%;
-    }
-    .resize-height {
-      max-height:600px;
+      max-height:100%;
     }
 
 /* navigation */
 header {
   background: #fff;
   width:100%;
-  position:absolute;
+  position:fixed;
   height:46px;
   top:0px;
 
@@ -155,12 +153,12 @@ header nav {
   .double-left {
     object-fit:contain;
     width:250px;
-    margin:50px;
+    margin:0 50px;
   }
   .double-right {
     max-width:450px;
     text-align:left;
-    margin:50px
+    margin:0 50px
   }
 
   /* triple - but rows */
@@ -201,7 +199,7 @@ header nav {
   }
 
   .double {
-    margin: 200px 0 100px 0;
+    margin-bottom:100px;
     display:flex;
       flex-direction:column;
       flex-wrap:wrap;
@@ -220,7 +218,18 @@ header nav {
   #content {
     width:80%;
   }
-  .resize-wide {
-    max-width:600px;
-  }
 }
+
+footer {
+  background:#fff;
+  text-align:center;
+  width:100%;
+  position:relative;
+  margin-top:100px;
+  margin-bottom:30px;
+  bottom:0px;
+}
+  .icon {
+    width:25px;
+    margin:10px;
+  }
