@@ -100,6 +100,10 @@ header nav {
   .margin {
     margin-top:150px;
   }
+  .caption {
+    font-style: italic;
+    text-align: center;
+  }
 
   /* section animation */
   section {
