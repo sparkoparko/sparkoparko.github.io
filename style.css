@@ -104,9 +104,9 @@ header nav {
   .margin {
     margin-top:150px;
   }
-  .caption {
-    font-style: italic;
-    text-align: center;
+
+  .spacing {
+    margin-right:50px;
   }
 
   /* section animation */
@@ -130,7 +130,6 @@ header nav {
       margin: 50px auto;
     }
     .cover {
-      margin:50px;
       max-width:500px;
     }
     .cover:hover{
@@ -196,12 +195,8 @@ header nav {
   .cover {
     width:450px;
   }
-  .single {
-    margin:200px 0 50px 0;
-  }
 
   .double {
-    margin-bottom:100px;
     display:flex;
       flex-direction:column;
       flex-wrap:wrap;
@@ -213,6 +208,10 @@ header nav {
     }
 
     .double-right {
+      margin:0;
+    }
+
+    .spacing {
       margin:0;
     }
 
