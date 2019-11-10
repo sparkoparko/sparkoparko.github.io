@@ -55,6 +55,15 @@ h2 {
     align-items:center;
 }
 
+.hide {
+  display:none;
+}
+
+.visible {
+  display:block;
+}
+
+
 p {
   margin-bottom:5px;
 }

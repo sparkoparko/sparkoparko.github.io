@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Sarah Park</title>
-    <link rel ="stylesheet" href="style.css">
+    <link rel = "stylesheet" href="style.css">
   </head>
 	<body>
 
@@ -55,7 +55,8 @@
 			<h2>Our research and its implications</h2>
 			<h1>Research breakdown</h1>
 
-			<h2>+ Journey Map</h2>
+			<h2 class="dropdown">+ Journey Map</h2>
+				<section class="wrapper">
 				<p> The website’s intended audience were employees in associate-level positions looking for a new market research consulting agency. I interviewed 4 external associate-level employees and asked about their business-to-business interactions (B2B). I identified our user’s goals, attitudes, and emotions when approaching a new company.
 				</p>
 				<p>Users search through a company website for its product or service description and its price. However, these three pain points are a hindrance:
@@ -67,6 +68,7 @@
 				<p>We created a diagram to visualize these pain points.</p>
 				<img class="resize" src="img/paradoxes/journey map.png" />
 				<p>We concluded that searching through a website is a necessary component of company research, yet <strong>cumbersome and frustrating.</strong></p>
+				</section>
 
 			<h2 class="margin">+ Competitive analysis</h2>
 			<div class="double">
@@ -115,5 +117,24 @@ We analyzed 24 competitors and segmented them by similar size, audiences and ser
 		<p class="tiny">designed & programmed by Sarah Park</p>
 </footer>
   <!-- footer -->
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('wrapper').addClass("hidden");
+
+			$('wrapper').click(function() {
+				var $this = $(this);
+
+				if ($this.hasClass("hidden")) {
+					$(this).removeClass("hidden").addClass("visible");
+
+				} else {
+					$(this).removeClass("visible").addClass("hidden");
+				}
+			});
+		});
+	</script>
+
+
   </body>
 </html>
