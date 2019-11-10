@@ -55,11 +55,15 @@ h2 {
     align-items:center;
 }
 
-.hide {
+.click:hover {
+  cursor:pointer;
+}
+
+.hidden>.dropdown {
   display:none;
 }
 
-.visible {
+.visible>.dropdown {
   display:block;
 }
 
