@@ -59,6 +59,10 @@ p {
   margin-bottom:5px;
 }
 
+  .tiny {
+    font-size:.7em;
+  }
+
 img, video {
   margin:25px 0;
   }
@@ -228,7 +232,7 @@ footer {
   text-align:center;
   width:100%;
   position:relative;
-  padding-bottom:50px;
+  padding-bottom:20px;
   padding-top:10px;
   bottom:0px;
 }
