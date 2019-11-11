@@ -9,12 +9,12 @@
 
   // Animation onto long text
   function click() {
-    qsa(".click").addEventListener("click", toggle);
+    qs(".click").addEventListener("click", toggle);
   }
 
   // Hides or shows long text
   function toggle() {
-    qsa(".click > div").classList.toggle("hide");
+    qs(".click > div").classList.toggle("hide");
   }
 
   /**
