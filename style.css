@@ -59,14 +59,9 @@ h2 {
   cursor:pointer;
 }
 
-.hidden>.dropdown {
+.hide {
   display:none;
 }
-
-.visible>.dropdown {
-  display:block;
-}
-
 
 p {
   margin-bottom:5px;

@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Sarah Park</title>
     <link rel = "stylesheet" href="style.css">
+		<script src="script.js"></script>
   </head>
 	<body>
 
@@ -57,9 +58,9 @@
 
 			<section class="click">
 			<h2>+ Journey Map</h2>
-			<p> The website’s intended audience were employees in associate-level positions looking for a new market research consulting agency. I interviewed 4 external associate-level employees and asked about their business-to-business interactions (B2B). I identified our user’s goals, attitudes, and emotions when approaching a new company.
-			</p>
-				<div class="dropdown"><!-- hide all content here -->
+				<div class="hide"><!-- hide all content here -->
+				<p> The website’s intended audience were employees in associate-level positions looking for a new market research consulting agency. I interviewed 4 external associate-level employees and asked about their business-to-business interactions (B2B). I identified our user’s goals, attitudes, and emotions when approaching a new company.
+				</p>
 				<p>Users search through a company website for its product or service description and its price. However, these three pain points are a hindrance:
 					<ul>
 						<li><Strong>limited time</strong> - the user has multiple projects to tackle</li>
@@ -68,12 +69,13 @@
 					</ul>
 				<p>We created a diagram to visualize these pain points.</p>
 				<img class="resize" src="img/paradoxes/journey map.png" />
-			</div><!-- hide all content here -->
 				<p>We concluded that searching through a website is a necessary component of company research, yet <strong>cumbersome and frustrating.</strong></p>
+			</div><!-- hide all content here -->
 			</section>
 
-			<h2>Competitive analysis</h2>
-			<div class="double">
+			<section class="click">
+			<h2>+ Competitive analysis</h2>
+			<div class="hide double">
 				<img class="double-left resize" src="img/paradoxes/layout.png" />
 				<section class="double-right">
 				<p>
@@ -92,6 +94,7 @@ We analyzed 24 competitors and segmented them by similar size, audiences and ser
 				</p>
 			</section>
 			</div>
+			</section>
 
 			<section class="margin">
 				<h2>The final product</h2>
@@ -116,23 +119,8 @@ We analyzed 24 competitors and segmented them by similar size, audiences and ser
 		<a href="mailto:1004sarahpark@gmail.com"><img class="icon" src="img/icons/google-plus.png" /></a>
 		<a href="https://www.instagram.com/sparkoparko/"><img class="icon" src="img/icons/instagram.png" /></a>
 		<p class="tiny">designed & programmed by Sarah Park</p>
-</footer>
+	</footer>
   <!-- footer -->
-
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.click').addClass("hidden");
-      $('.click').click(function() {
-        var $this = $(this);
-        if ($this.hasClass("hidden")) {
-          $(this).removeClass("hidden").addClass("visible");
-        } else {
-          $(this).removeClass("visible").addClass("hidden");
-        }
-      });
-    });
-  </script>
 
   </body>
 </html>
