@@ -17,6 +17,29 @@ a {
     background-repeat: repeat-x;
     background-size: 3px 3px;
 }
+  a.hovertext {
+    position:relative;
+    text-align:center;
+    font-size:1.6em;
+  }
+  a.hovertext::after {
+    content: attr(title);
+    position: absolute;
+    left:0;
+    transform-origin:top;
+    width: 500px;
+    text-decoration: none !important;
+    color: #000;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+  }
+  a.hovertext:hover::after, a.hovertext:focus::after {
+    opacity: 1.0;
+  }
+
   nav a {
       line-height: 1.2;
       padding:6px;
@@ -141,15 +164,7 @@ header nav {
       max-width:500px;
     }
     .cover:hover{
-      opacity:0.4;
-    }
-    .fade {
-      visibility:hidden;
-      position:absolute;
-    }
-    .fade:hover{
-      visibility:visible;
-      opacity:1;
+      opacity:0.2;
     }
 
   /* double column */
