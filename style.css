@@ -78,10 +78,6 @@ h2 {
     align-items:center;
 }
 
-.click:hover {
-  cursor:pointer;
-}
-
 .hide {
   display:none;
 }

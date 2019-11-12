@@ -7,14 +7,27 @@
     click();
   }
 
-  // Animation onto long text
+  // Hides or shows long text underneath header
   function click() {
-    qs(".click").addEventListener("click", toggle);
+    clickHeader();
   }
 
-  // Hides or shows long text
-  function toggle() {
-    qs(".click > div").classList.toggle("hide");
+// when I click .overflow, all of the content inside .toggle should appear.
+  function clickHeader() {
+    let div = qsa(".toggle");
+    let header = qsa(".overflow");
+    for (let i = 0; i < header.length; i++) {
+      header[i].addEventListener("click", toggle(i, div));
+    }
+  }
+
+  function toggle(i, div) {
+    let section = div[i].classList;
+    if (section.contains("hide")) {
+      section.remove("hide");
+    } else {
+      section.add("hide");
+    }
   }
 
   /**
