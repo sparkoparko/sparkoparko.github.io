@@ -35,6 +35,7 @@
       id.push(API_BASE + "/" + text.id + TOKEN);
     }
     return url;
+    console.log("a");
   }
 
   /**
@@ -47,6 +48,7 @@
         .then(checkStatus)
         .then(appendImg)
     }
+    console.log("b");
   }
 
   function appendImg(text) {
@@ -54,6 +56,7 @@
     let plant = document.createElement("img");
     plant.src = url;
     qsa("projects").appendChild(plant);
+    console.log("c");
   }
 
   /**
