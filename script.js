@@ -17,6 +17,7 @@
   // Populates the directory with all images of plants
   function directory() {
     let url = API_BASE + TOKEN;
+
     fetch(url)
       .then(checkStatus)
       .then(findUrl)
@@ -34,6 +35,7 @@
     for (let i = 0; i < text.length; i++) {
       id.push(API_BASE + "/" + text.id + TOKEN);
     }
+    console.log(url);
     return url;
   }
 
