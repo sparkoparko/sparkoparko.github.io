@@ -1,5 +1,5 @@
 /**
-* Credits to UW for functions id, qsa, and qs
+* Credits to UW for functions id, qsa, qs, and checkStatus
 *         to trefle.io for the botanical API
 */
 
@@ -46,7 +46,6 @@
       fetch(num[i])
         .then(checkStatus)
         .then(appendImg)
-        .catch(console.log("hey");
     }
   }
 
@@ -82,5 +81,20 @@
    */
   function qs(selector) { // less common, but you may find it helpful
     return document.querySelector(selector)
+  }
+  
+  /*
+   * Helper function to return the response's result text if successful, otherwise
+   * returns the rejected Promise result with an error status and corresponding text
+   * @param {object} response - response to check for success/error
+   * @returns {object} - valid result text if response was successful, otherwise rejected
+   *                     Promise result
+   */
+  function checkStatus(response) {
+    if (response.status >= 200 && response.status < 300 || response.status == 0) {
+      return response.text();
+    } else {
+      return Promise.reject(new Error(response.status + ": " + response.statusText));
+    }
   }
 }();
