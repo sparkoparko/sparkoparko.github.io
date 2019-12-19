@@ -20,42 +20,38 @@
 
     fetch(url)
       .then(checkStatus)
-      .then(findId)
+      .then(findUrl)
       .then(findImg)
   }
 
   /**
-  * Returns an array resulting from splitting text response
-  * @param {string} text - text to split names by a new line
-  * @returns {int[]} - array of ints containing plant IDs
+  * Returns an array resulting from JSON text query of all plants
+  * @param {string} text - text to search through JSON object
+  * @returns {String[]} - array of Strings containing each plant url
   */
-  function findId(text) {
-    let id = [];
-    let line = text.split(",");
-    for (let i = 0; i < line.length; i++) {
-      let name = line[i].split(":");
-      for (let x = 0; x < name.length; x++) {
-        if (name[i] == "id") {
-          id.push(name[1]);
-        }
-      }
-      for jsonObject in jsonarray {
-        id.push(jsonObject.id)
-        id.push(jsonObject["id"])
-      }
+  function findUrl(text) {
+    let url = [];
+    for (int i = 0; i < text.length; i++) {
+      id.push(API_BASE + '/' + text.id + TOKEN);
     }
-    return id;
+    return url;
   }
 
   /**
-  * Returns an array of each plant's images
-  * @param {int[]} num - numbers to split names by a new line
-  * @returns {string[]} - array of strings containing plant img urls
+  * Finds and appends all plant images
+  * @param {String[]} num - array of ints with urls to query a plant
   */
   function findImg(num) {
-    let img = [];
-    for (let i = 0; )
+    for (let i = 0; i < num.length; i++) {
+      fetch(num[i])
+        .then(checkStatus)
+        .then(appendImg)
+    }
   }
+
+  function appendImg(text) {
+    let url = text.images;
+    
 
   /**
    * Returns the element that has the ID attribute with the specified value.
