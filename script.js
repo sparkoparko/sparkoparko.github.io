@@ -22,6 +22,7 @@
       .then(checkStatus)
       .then(findUrl)
       .then(findImg)
+      .catch(console.log);
   }
 
   /**
@@ -35,7 +36,6 @@
       id.push(API_BASE + "/" + text.id + TOKEN);
     }
     return url;
-    console.log("a");
   }
 
   /**
@@ -44,19 +44,19 @@
   */
   function findImg(num) {
     for (let i = 0; i < num.length; i++) {
-      fetch(num[i])
+      let url = num[i];
+      fetch(url)
         .then(checkStatus)
         .then(appendImg)
     }
-    console.log("b");
   }
 
   function appendImg(text) {
     let url = text.images;
     let plant = document.createElement("img");
+    plant.classList.add("resize");
     plant.src = url;
     qsa("projects").appendChild(plant);
-    console.log("c");
   }
 
   /**
