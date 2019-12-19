@@ -32,7 +32,7 @@
   function findUrl(text) {
     let url = [];
     for (int i = 0; i < text.length; i++) {
-      id.push(API_BASE + '/' + text.id + TOKEN);
+      id.push(API_BASE + "/" + text.id + TOKEN);
     }
     return url;
   }
@@ -51,7 +51,10 @@
 
   function appendImg(text) {
     let url = text.images;
-    
+    let plant = document.createElement("img");
+    plant.src = url;
+    qsa("projects").appendChild(plant);
+  }
 
   /**
    * Returns the element that has the ID attribute with the specified value.
