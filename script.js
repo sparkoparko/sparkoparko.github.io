@@ -46,6 +46,7 @@
       fetch(num[i])
         .then(checkStatus)
         .then(appendImg)
+        .catch(console.log("hey");
     }
   }
 
