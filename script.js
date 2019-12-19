@@ -39,6 +39,10 @@
           id.push(name[1]);
         }
       }
+      for jsonObject in jsonarray {
+        id.push(jsonObject.id)
+        id.push(jsonObject["id"])
+      }
     }
     return id;
   }
