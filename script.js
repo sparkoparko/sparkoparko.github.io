@@ -4,7 +4,7 @@
 */
 
 "use strict";
-(function()) {
+(function() {
   const API_BASE = 'https://trefle.io/api/plants';
   const TOKEN = '?token=UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09';
   window.addEventListener("load", init);
@@ -17,7 +17,6 @@
   // Populates the directory with all images of plants
   function directory() {
     let url = API_BASE + TOKEN;
-
     fetch(url)
       .then(checkStatus)
       .then(findUrl)
@@ -32,21 +31,21 @@
   */
   function findUrl(text) {
     let url = [];
-    for (int i = 0; i < text.length; i++) {
+    for (let i = 0; i < text.length; i++) {
       id.push(API_BASE + "/" + text.id + TOKEN);
     }
     return url;
   }
 
   function testing(url) {
-    for (int i = 0; i < url.length; i++) {
+    for (let i = 0; i < url.length; i++) {
       let text = url[i];
       let plant = document.createElement("p");
       plant.createTextNode(url);
       qsa("projects").appendChild(plant);
     }
   }
-  
+
   /**
   * Finds and appends all plant images
   * @param {String[]} num - array of ints with urls to query a plant
@@ -94,7 +93,7 @@
   function qs(selector) { // less common, but you may find it helpful
     return document.querySelector(selector)
   }
-  
+
   /*
    * Helper function to return the response's result text if successful, otherwise
    * returns the rejected Promise result with an error status and corresponding text
@@ -109,4 +108,4 @@
       return Promise.reject(new Error(response.status + ": " + response.statusText));
     }
   }
-}();
+})();
