@@ -42,7 +42,7 @@
     for (int i = 0; i < url.length; i++) {
       let text = url[i];
       let plant = document.createElement("p");
-      plant.src = url;
+      plant.createTextNode(url);
       qsa("projects").appendChild(plant);
     }
   }
