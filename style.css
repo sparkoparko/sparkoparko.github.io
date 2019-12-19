@@ -1,258 +1,110 @@
 /* body, links, headers */
 body {
-    color: #3c4245;
-    background:#fff;
-    overflow:visible;
-    height:100%;
-    width:100%;
-    margin:0;
-    padding:0;
-    font-size:18px;
-    font-family:"Avenir", sans-serif;
+    color: #000;
+    -webkit-animation: fadein 1.6s;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "Avenir", sans-serif;
 }
+  .center {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 
 a {
-    color:#537ec5;
-    text-decoration:none;
-    background-repeat: repeat-x;
-    background-size: 3px 3px;
-}
-  a.hovertext {
-    position:relative;
-    text-align:center;
-    font-size:1.6em;
-  }
-  a.hovertext::after {
-    content: attr(title);
-    position: absolute;
-    left:0;
-    transform-origin:top;
-    width: 500px;
-    text-decoration: none !important;
-    color: #000;
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    -ms-transition: 0.5s;
-  }
-  a.hovertext:hover::after, a.hovertext:focus::after {
-    opacity: 1.0;
-  }
+  color: #000;
+  text-decoration: none;
 
-  nav a {
-      line-height: 1.2;
-      padding:6px;
+}
+  a:hover {
+    -webkit-animation: fadeOutUp 5s;
   }
-  nav a:hover {
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-    background-position: 0 100%;
-    background-size: auto 6px;
-    background-repeat: repeat-x;
-    text-decoration: none
+  a.about {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform-origin: 100% 0;
+    transform: rotate(90deg) translate(50%, 0);
+  }
+  a.personal {
+    position: fixed;
+    left: 100px;
+    top: 50%;
+    transform-origin: 0 0;
+    transform: rotate(-90deg) translate(-50%, 0);
+  }
+  a.talk {
+    color: #FFF;
   }
 
 h1 {
-  color: #505bda;
-  font-family:"Optima", serif;
-  font-size:2.5em;
-  font-weight:lighter;
+  font-family: "Optima", serif;
+  font-size: 2.5em;
+  font-weight: lighter;
+  line-height: 40%;
 }
 
 h2 {
-  color:#543864;
-  font-family:"Avenir", sans-serif;
-  font-size:1em;
-  text-transform:uppercase;
+  font-family: "Audrey", serif;
+  font-weight: lighter;
+  text-transform: lowercase;
 }
 
-.highlight {
-    color:#ffd369;
-    font-size:2.5em;
-    text-transform:lowercase;
-    text-align:center;
-}
-.center {
-  display: flex;
-    justify-content:center;
-    align-items:center;
+h3 {
+  font-weight: lighter;
+  font-size: 14pt;
+  line-height: 40%;
 }
 
-.hide {
-  display:none;
+#container {
+  position: relative;
+  min-height: 100vh;
 }
 
-p {
-  margin-bottom:5px;
-}
-
-  .tiny {
-    font-size:.7em;
-  }
-
-img, video {
-  margin:25px 0;
-  }
-    .resize {
-      max-width:100%;
-      max-height:100%;
-    }
-
-/* navigation */
 header {
-  background: #fff;
-  width:100%;
-  position:fixed;
-  height:46px;
-  top:0px;
-
-  display:flex;
-    justify-content:space-around;
-    align-items:center;
-    z-index:9909999;
-    flex-wrap:wrap;
-}
-
-header nav {
-    width:80%;
-
-    display:flex;
-      align-items:center;
-      justify-content:space-around;
-      flex-wrap:wrap;
+  display: flex;
+    flex-direction: column;
+  padding-top: 50px;
 }
 
 /* section */
 #content {
-  width:60%;
-  min-height:100vh;
-  margin:0 auto;
+  max-width: 82.15%;
+  margin: 0 auto;
+  padding-bottom: 20em;
 }
-  .margin {
-    margin-top:150px;
+  .projects {
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    margin: 0 auto;
+    padding-top: 50px;
+    max-width: 75%;
   }
-
-  .spacing {
-    margin-right:50px;
+  .resize {
+    max-width: 40%;
+    max-height: 40%;
+    padding-top: 50px;
   }
-
-  /* section animation */
-  section {
-    animation:fade 1.6s 1 forwards;
-  }
-  @keyframes fadein {
-    from { opacity:0; }
-    to { opacity: 1;}
-  }
-
-  /* single column*/
-  .single {
-    flex-direction:column;
-  }
-    /* index.html */
-    .bio {
-      max-width:450px;
-      height:100%;
-      text-align:center;
-      margin: 50px auto;
-    }
-    .cover {
-      max-width:500px;
-    }
-    .cover:hover{
-      opacity:0.2;
-    }
-
-  /* double column */
-  .double {
-    display:flex;
-      flex-direction:row;
-      justify-content:center;
-      align-items:center;
-  }
-  .double-left {
-    object-fit:contain;
-    width:250px;
-    margin-right:50px;
-  }
-  .double-right {
-    max-width:450px;
-    text-align:left;
-    margin-left:50px;
-  }
-
-  /* triple - but rows */
-  .triple {
-    display:flex;
-      flex-direction:row;
-      justify-content: space-between;
-  }
-  .triple-1 {
-    max-width:450px;
-    margin-right:25px;
-  }
-  .triple-2 {
-    margin-right:25px;
-  }
-
-/* other??? */
-@keyframes fade {
-    0% {
-        opacity:0;
-    }
-
-    12% {
-        opacity:0;
-    }
-
-    100% {
-        opacity:1;
-    }
-}
-
-@media screen and (max-width: 64em) {
-  .cover {
-    width:450px;
-  }
-
-  .double {
-    display:flex;
-      flex-direction:column;
-      flex-wrap:wrap;
-    }
-
-    .double-left{
-      width:300px;
-      margin:0;
-    }
-
-    .double-right {
-      margin:0;
-    }
-
-    .spacing {
-      margin:0;
-    }
-
-  .triple {
-    display:flex;
-      flex-direction:column;
-      flex-wrap:wrap;
-      justify-content: space-between;
-    }
-  #content {
-    width:80%;
-  }
-}
 
 footer {
-  background:#fff;
-  text-align:center;
+  background-color: #000;
+  bottom: 0;
+  color: #FFF;
+  display: flex;
+    flex-direction: column;
+  height: 10em;
+  line-height: 40%;
+  position: absolute;
   width:100%;
-  position:relative;
-  padding-bottom:20px;
-  padding-top:10px;
-  bottom:0px;
 }
   .icon {
     width:25px;
