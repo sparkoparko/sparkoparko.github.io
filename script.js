@@ -6,7 +6,7 @@
 "use strict";
 (function() {
   const API_BASE = "https://trefle.io/api/plants";
-  const TOKEN = "?token=UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09";
+  const TOKEN = "?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpcCI6WzQ4LDQ2LDQ4LDQ2LDQ4LDQ2LDQ4XSwiaXNzdWVyX2lkIjoyMzg0LCJvcmlnaW4iOiJodHRwczovL3RoZXNhcmFocGFyay5jb20vcGxhbnQuaHRtbCIsImF1ZCI6Ikpva2VuIiwiZXhwIjoxNTc2ODA2MzkxLCJpYXQiOjE1NzY3OTkxOTEsImlzcyI6Ikpva2VuIiwianRpIjoiMm5ndWwwbDAwb2pubTZvMm1nbTJtaTYxIiwibmJmIjoxNTc2Nzk5MTkxfQ.bf6PPxlKowR-1-DNZA5pXV7cHoBrySGfhSEsGrmRnng";
   window.addEventListener("load", init);
 
   // Sets up the plant directory
