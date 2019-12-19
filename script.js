@@ -5,8 +5,8 @@
 
 "use strict";
 (function() {
-  const API_BASE = 'https://trefle.io/api/plants';
-  const TOKEN = '?token=UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09';
+  const API_BASE = "https://trefle.io/api/plants";
+  const TOKEN = "?token=UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09";
   window.addEventListener("load", init);
 
   // Sets up the plant directory
@@ -17,8 +17,7 @@
   // Populates the directory with all images of plants
   function directory() {
     let url = API_BASE + TOKEN;
-
-    fetch(url)
+    fetch(url, { mode: 'no-cors' })
       .then(checkStatus)
       .then(findUrl)
       .then(testing)
@@ -35,7 +34,6 @@
     for (let i = 0; i < text.length; i++) {
       id.push(API_BASE + "/" + text.id + TOKEN);
     }
-    console.log(url);
     return url;
   }
 
@@ -55,7 +53,7 @@
   function findImg(num) {
     for (let i = 0; i < num.length; i++) {
       let url = num[i];
-      fetch(url)
+      fetch(url, { mode: 'no-cors' })
         .then(checkStatus)
         .then(appendImg)
     }
@@ -69,7 +67,7 @@
     qsa("projects").appendChild(plant);
   }
 
-  /**
+  /** ==============================  Helper Functions ======================
    * Returns the element that has the ID attribute with the specified value.
    * @param {string} idName - element ID
    * @returns {object} DOM object associated with id.
@@ -104,7 +102,7 @@
    *                     Promise result
    */
   function checkStatus(response) {
-    if (response.status >= 200 && response.status < 300 || response.status == 0) {
+    if (response.status == 200) {
       return response.text();
     } else {
       return Promise.reject(new Error(response.status + ": " + response.statusText));
