@@ -1,42 +1,56 @@
+/**
+* Credits to UW for functions id, qsa, and qs
+*         to trefle.io for the botanical API
+*/
+
 "use strict";
-(function() {
+(function()) {
+  const API_BASE = 'https://trefle.io/api/plants';
+  const TOKEN = '?token=UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09';
   window.addEventListener("load", init);
 
-  // Add animation to my website
+  // Sets up the plant directory
   function init() {
-    click();
+    directory();
   }
 
-  // Hides or shows long text underneath header
-  function click() {
-    clickHeader();
-  }
+  // Populates the directory with all images of plants
+  function directory() {
+    let url = API_BASE + TOKEN;
 
-// when I click .overflow, all of the content inside .toggle should appear.
-  function clickHeader() {
-    let div = qsa(".toggle");
-    let header = qsa(".overflow");
-    for (let i = 0; i < header.length; i++) {
-      header[i].addEventListener("click", toggle(i, div));
-    }
-  }
-
-  function toggle(i, div) {
-    let section = div[i].classList;
-    if (section.contains("hide")) {
-      section.remove("hide");
-    } else {
-      section.add("hide");
-    }
+    fetch(url)
+      .then(checkStatus)
+      .then(findId)
+      .then(findImg)
   }
 
   /**
-   * Returns the first element that matches the given CSS selector.
-   * @param {string} query - CSS query selector.
-   * @returns {object} The first DOM object matching the query.
-   */
-  function qs(query) {
-    return document.querySelector(query);
+  * Returns an array resulting from splitting text response
+  * @param {string} text - text to split names by a new line
+  * @returns {int[]} - array of ints containing plant IDs
+  */
+  function findId(text) {
+    let id = [];
+    let line = text.split(",");
+    for (let i = 0; i < line.length; i++) {
+      let name = line[i].split(":");
+      for (let x = 0; x < name.length; x++) {
+        if (name[i] == "id") {
+          id.push(name[1]);
+        }
+      }
+    }
+    return id;
+  }
+
+  /**
+  * Returns an array of each plant's images
+  * @param {int[]} num - numbers to split names by a new line
+  * @returns {string[]} - array of strings containing plant img urls
+  */
+  function findImg(num) {
+    let img = [];
+    for (let i = 0; )
   }
 
   /**
@@ -50,10 +64,19 @@
 
   /**
    * Returns the array of elements that match the given CSS selector.
-   * @param {string} query - CSS query selector
+   * @param {string} selector - CSS query selector
    * @returns {object[]} array of DOM objects matching the query.
    */
-  function qsa(query) {
-    return document.querySelectorAll(query);
+  function qsa(selector) {
+    return document.querySelectorAll(selector);
   }
-})();
+
+  /**
+   * Returns the first element that matches the given CSS selector.
+   * @param {string} selector - CSS query selector.
+   * @returns {object} The first DOM object matching the query.
+   */
+  function qs(selector) { // less common, but you may find it helpful
+    return document.querySelector(selector)
+  }
+}();
