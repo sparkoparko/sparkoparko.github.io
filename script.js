@@ -21,7 +21,7 @@
     fetch(url)
       .then(checkStatus)
       .then(findUrl)
-      .then(findImg)
+      .then(testing)
       .catch(console.log);
   }
 
@@ -38,6 +38,15 @@
     return url;
   }
 
+  function testing(url) {
+    for (int i = 0; i < url.length; i++) {
+      let text = url[i];
+      let plant = document.createElement("p");
+      plant.src = url;
+      qsa("projects").appendChild(plant);
+    }
+  }
+  
   /**
   * Finds and appends all plant images
   * @param {String[]} num - array of ints with urls to query a plant
