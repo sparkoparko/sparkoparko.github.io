@@ -16,7 +16,7 @@
 
   // Populates the directory with all images of plants
   function directory() {
-    let url = API_BASE + TOKEN;
+    let url = "https://crossorigin.me/" + API_BASE + TOKEN;
     fetch(url, { mode: 'no-cors' })
       .then(checkStatus)
       .then(findUrl)
