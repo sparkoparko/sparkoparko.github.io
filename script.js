@@ -16,11 +16,11 @@
 
   // Populates the directory with all images of plants
   function directory() {
-    let url = "https://crossorigin.me/" + API_BASE + TOKEN;
+    let url = API_BASE + TOKEN;
     fetch(url, { mode: 'no-cors' })
       .then(checkStatus)
       .then(findUrl)
-      .then(testing)
+      .then(addImg)
       .catch(console.log);
   }
 
@@ -37,7 +37,7 @@
     return url;
   }
 
-  function testing(url) {
+  function addImg(url) {
     for (let i = 0; i < url.length; i++) {
       let text = url[i];
       let plant = document.createElement("p");
@@ -102,8 +102,9 @@
    *                     Promise result
    */
   function checkStatus(response) {
+    console.log(response);
     if (response.status == 200) {
-      return response.text();
+      return response.json();
     } else {
       return Promise.reject(new Error(response.status + ": " + response.statusText));
     }
