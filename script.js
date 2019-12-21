@@ -15,10 +15,10 @@
   }
 
   function t() {
-    fetch("https://trefle.io/api/plants?q=Rosemary", {
-      mode: "no-cors",
+    fetch("https://trefle.io/api/plants", {
       headers: {
-        token: "UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09"
+        token: "UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09",
+        Access-Control-Allow-Origin: *
       }
     })
     .then(checkStatus)
