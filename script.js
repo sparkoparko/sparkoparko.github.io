@@ -18,7 +18,8 @@
     fetch("https://trefle.io/api/plants?q=Rosemary", {
       headers: {
         token: "UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09"
-      })
+      }
+    })
   }
 
   // Populates the directory with all images of plants
