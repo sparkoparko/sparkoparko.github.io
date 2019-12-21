@@ -6,7 +6,7 @@
 "use strict";
 (function() {
   const API_BASE = "https://trefle.io/api/plants";
-  const TOKEN = "?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpcCI6WzQ4LDQ2LDQ4LDQ2LDQ4LDQ2LDQ4XSwiaXNzdWVyX2lkIjoyMzg0LCJvcmlnaW4iOiJodHRwczovL3RoZXNhcmFocGFyay5jb20vcGxhbnQuaHRtbCIsImF1ZCI6Ikpva2VuIiwiZXhwIjoxNTc2ODA2MzkxLCJpYXQiOjE1NzY3OTkxOTEsImlzcyI6Ikpva2VuIiwianRpIjoiMm5ndWwwbDAwb2pubTZvMm1nbTJtaTYxIiwibmJmIjoxNTc2Nzk5MTkxfQ.bf6PPxlKowR-1-DNZA5pXV7cHoBrySGfhSEsGrmRnng";
+  const TOKEN = "https://trefle.io/api/plants?token=UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09";
   window.addEventListener("load", init);
 
   // Sets up the plant directory
@@ -16,7 +16,7 @@
 
   // Populates the directory with all images of plants
   function directory() {
-    let url = API_BASE + TOKEN;
+    let url = TOKEN;
     fetch(url, { mode: 'no-cors' })
       .then(checkStatus)
       .then(findUrl)
