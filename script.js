@@ -16,10 +16,13 @@
 
   function t() {
     fetch("https://trefle.io/api/plants?q=Rosemary", {
-      headers: {
+      mode: "no-cors",
+      headers: {
         token: "UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09"
       }
     })
+    .then(checkStatus)
+    .catch(console.log)
   }
 
   // Populates the directory with all images of plants
