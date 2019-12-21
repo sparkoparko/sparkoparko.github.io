@@ -1,0 +1,66 @@
+body {
+  background-image: url("background.jpg");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  color: #000;
+  font-size: 14pt;
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+  font-size: 25pt;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 21pt;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 14pt;
+  font-weight: lighter;
+}
+
+main {
+  background-color: #FFF;
+  border-radius: 12px;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 55%;
+}
+
+form {
+  padding: 20px;
+  text-align: left;
+  width: 50%;
+}
+
+#payment {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+label, input[type=text] {
+    margin-top: 30px;
+}
+
+.column {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+  background-color: #896652;
+  border-radius: 5px;
+  color: #FFF;
+  font-family: Arial;
+  font-size: 14pt;
+  padding: 5px;
+}

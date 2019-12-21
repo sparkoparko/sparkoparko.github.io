@@ -17,8 +17,8 @@
   function t() {
     fetch("https://trefle.io/api/plants", {
       headers: {
-        token: "UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09",
         Access-Control-Allow-Origin: *
+        token: "UUdUT3RScmVIdkE2TEFaUDRiWng0Zz09"
       }
     })
     .then(checkStatus)
