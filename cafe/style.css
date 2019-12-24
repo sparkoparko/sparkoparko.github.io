@@ -23,6 +23,10 @@ h3 {
   font-weight: lighter;
 }
 
+p {
+  margin: 0;
+}
+
 main {
   background-color: #FFF;
   border-radius: 12px;
@@ -41,19 +45,35 @@ form {
   width: 50%;
 }
 
-#payment {
+.resize {
+  width: 85%;
+}
+
+legend {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container {
   display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-label, input[type=text] {
-    margin-top: 30px;
 }
 
 .column {
   display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.bold {
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+.resize label {
+  display: inline-block;
+  width: 94.5%;
 }
 
 button {
