@@ -71,10 +71,14 @@ legend {
     padding-top: 25px;
 }
 
-.resize label {
-  display: inline-block;
-  width: 94.5%;
-}
+  .resize label {
+    display: inline-block;
+    width: 94.5%;
+  }
+  #payment label, #payment input {
+    margin-top: left;
+  }
+
 
 button {
   background-color: #896652;
