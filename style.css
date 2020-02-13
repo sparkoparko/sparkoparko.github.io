@@ -1,21 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+
+a {
+  color: #1d2027;
+}
+
+a:hover{
+  color: #b76e79;
+  text-decoration: none;
+}
+
 body {
-  background-color: #f8fcfb;
-  color: #293a53;
+  background-color: #e2dfd8;
+  color: #1d2027;
   font-family: "Avenir", sans-serif;
   font-size: 15pt;
 }
 
 h1 {
-  font-size: 45pt;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40pt;
+  font-weight: 500;
 }
 
 h2 {
+  font-family: "Cormorant Garamond", serif;
   font-size: 25pt;
-  font-weight: lighter;
 }
 
 h3 {
+  font-family: "Avenir";
   font-size: 13pt;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -24,11 +39,20 @@ html {
 }
 
 #navigation {
-  background-color: #f8fcfb;
+  background-color: #e2dfd8;
 }
 
 .center-align {
   text-align: center;
+}
+
+.final-presentation {
+  background-color: #1d2027;
+  color: #e2dfd8;
+}
+
+.highlight {
+  border-bottom: 2px solid #5d8aa8;
 }
 
 .ml-3 {
@@ -44,13 +68,25 @@ html {
   margin-bottom: ($spacer * .25) !important;
 }
 
+.navbar-light {
+  color: #FFF;
+}
+
 .persona {
-  border: 3px solid;
+  border: 3px solid #b76e79;
   border-radius: 25px;
   box-sizing: border-box;
+  color: #4d3b3c;
   height: 150px;
   padding-top: 50px;
   width: 150px;
+}
+
+.quote {
+  background-color: #dbd7d2;
+  border: 1px solid #dbd7d2;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .right-align {
