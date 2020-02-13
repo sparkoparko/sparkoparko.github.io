@@ -1,0 +1,67 @@
+body {
+  background-color: #f8fcfb;
+  color: #293a53;
+  font-family: "Avenir", sans-serif;
+  font-size: 15pt;
+}
+
+h1 {
+  font-size: 45pt;
+}
+
+h2 {
+  font-size: 25pt;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 13pt;
+  text-transform: uppercase;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+#navigation {
+  background-color: #f8fcfb;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.ml-3 {
+  margin-left: !important;
+}
+
+.mx-auto {
+  width: 700px;
+}
+
+.my-5 {
+  margin-top: ($spacer * .25) !important;
+  margin-bottom: ($spacer * .25) !important;
+}
+
+.persona {
+  border: 3px solid;
+  border-radius: 25px;
+  box-sizing: border-box;
+  height: 150px;
+  padding-top: 50px;
+  width: 150px;
+}
+
+.resize {
+  width: 80%;
+  height: auto;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.strong {
+  font-weight: bold;
+}
