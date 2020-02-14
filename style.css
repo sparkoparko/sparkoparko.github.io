@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
 
-.row a, .other a {
+.row a {
   color: #1d2027;
   text-decoration: underline;
   text-decoration-color: #b76e79
 }
 
-.row a:hover, .other a:hover {
+.row a:hover {
   color: #1d2027;
+  transition: all 0.3s ease-out;
+
+}
+
+#vui a:hover:after {
+    content: url(img/vui-whiteboarding.jpg);
+    display: block;
 }
 
 body {
