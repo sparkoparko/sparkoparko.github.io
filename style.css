@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
 
-a {
+.row a {
   color: #1d2027;
+  text-decoration: underline;
+  text-decoration-color: #b76e79
 }
 
-a:hover{
-  color: #b76e79;
-  text-decoration: none;
+.row a:hover {
+  color: #1d2027;
 }
 
 body {
@@ -47,12 +48,22 @@ html {
   font-weight: normal;
 }
 
+#img-divider {
+  height: 80%;
+  opacity: .8;
+  width: auto;
+}
+
 #navigation {
   background-color: #e2dfd8;
 }
 
 .center-align {
   text-align: center;
+}
+
+.footnote {
+  font-size: 8pt;
 }
 
 .highlight {
@@ -75,6 +86,10 @@ html {
   height: 125px;
   padding-top: 40px;
   width: 125px;
+}
+
+.polaroid {
+  border: 20px solid #fff;
 }
 
 .quote {
