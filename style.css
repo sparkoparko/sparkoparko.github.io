@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
 
-.row a {
+.row a, .other a {
   color: #1d2027;
   text-decoration: underline;
   text-decoration-color: #b76e79
 }
 
-.row a:hover {
+.row a:hover, .other a:hover {
   color: #1d2027;
 }
 
