@@ -38,6 +38,15 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+#final-presentation {
+  background-color: #1d2027;
+  color: #e2dfd8;
+}
+
+#footer h3 {
+  font-weight: normal;
+}
+
 #navigation {
   background-color: #e2dfd8;
 }
@@ -46,26 +55,12 @@ html {
   text-align: center;
 }
 
-.final-presentation {
-  background-color: #1d2027;
-  color: #e2dfd8;
-}
-
 .highlight {
   border-bottom: 2px solid #5d8aa8;
 }
 
-.ml-3 {
-  margin-left: !important;
-}
-
 .mx-auto {
   width: 700px;
-}
-
-.my-5 {
-  margin-top: ($spacer * .25) !important;
-  margin-bottom: ($spacer * .25) !important;
 }
 
 .navbar-light {
@@ -77,9 +72,9 @@ html {
   border-radius: 25px;
   box-sizing: border-box;
   color: #4d3b3c;
-  height: 150px;
-  padding-top: 50px;
-  width: 150px;
+  height: 125px;
+  padding-top: 40px;
+  width: 125px;
 }
 
 .quote {
