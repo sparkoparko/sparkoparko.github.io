@@ -3,7 +3,7 @@
 .row a {
   color: #1d2027;
   text-decoration: underline;
-  text-decoration-color: #b76e79
+  text-decoration-color: #b76e79;
 }
 
 .row a:hover {
@@ -20,8 +20,9 @@
 body {
   background-color: #fff;
   color: #1d2027;
-  font-family: "Avenir", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15pt;
+  font-weight: lighter;
 }
 
 h1 {
