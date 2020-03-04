@@ -19,6 +19,10 @@ body {
   font-weight: lighter;
 }
 
+div {
+  padding: 10px 0;
+}
+
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 40pt;
@@ -138,8 +142,13 @@ html {
   padding: 20px;
 }
 
-.resize {
+.first-resize {
   height: 62%;
+  width: auto;
+}
+
+.second-resize {
+  height: 95%;
   width: auto;
 }
 
