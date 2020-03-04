@@ -46,11 +46,11 @@ html {
   color: #fff;
 }
 
-#first {
+#connect-card {
   background: #010b13;
   color: #FFF;
 }
-  #first img {
+  #connect-card img {
     float: right;
     bottom: 0;
   }
@@ -69,8 +69,8 @@ html {
   background-color: #fff;
 }
 
-#second > img {
-  vertical-align: middle;
+#third img {
+  margin-left: 20px;
 }
 
 .center-align {
@@ -91,9 +91,14 @@ html {
   padding: 40px 0 0 50px;
   width: 330px;
 }
-
   .cover > p {
     padding-right: 50px;
+  }
+  .cover > a {
+    color: inherit;
+  }
+  .cover > a:hover {
+    text-decoration: none;
   }
 
 .footnote {
@@ -134,7 +139,7 @@ html {
 }
 
 .resize {
-  height: 68%;
+  height: 62%;
   width: auto;
 }
 
