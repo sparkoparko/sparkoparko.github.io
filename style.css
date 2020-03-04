@@ -23,6 +23,10 @@ div {
   padding: 10px 0;
 }
 
+footer {
+  font-size: 10pt;
+}
+
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 40pt;
