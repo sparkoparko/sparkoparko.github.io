@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
 
-.row a {
+.row p > a {
   color: #1d2027;
   text-decoration: underline;
   text-decoration-color: #b76e79;
-}
-
-.row a:hover {
-  color: #1d2027;
-  transition: all 0.3s ease-out;
-
 }
 
 #vui a:hover:after {
@@ -52,6 +46,15 @@ html {
   color: #fff;
 }
 
+#first {
+  background: #010b13;
+  color: #FFF;
+}
+  #first img {
+    float: right;
+    bottom: 0;
+  }
+
 #footer h3 {
   font-weight: normal;
 }
@@ -66,9 +69,32 @@ html {
   background-color: #fff;
 }
 
+#second > img {
+  vertical-align: middle;
+}
+
 .center-align {
   text-align: center;
 }
+
+.cover {
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07),
+                0 2px 4px rgba(0,0,0,0.07),
+                0 4px 8px rgba(0,0,0,0.07),
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07),
+                0 32px 64px rgba(0,0,0,0.07);
+  height: 470px;
+  margin: 25px;
+  overflow: hidden;
+  padding: 40px 0 0 50px;
+  width: 330px;
+}
+
+  .cover > p {
+    padding-right: 50px;
+  }
 
 .footnote {
   font-size: 8pt;
@@ -105,6 +131,11 @@ html {
   border: 1px solid #f5f5f5;
   border-radius: 15px;
   padding: 20px;
+}
+
+.resize {
+  height: 68%;
+  width: auto;
 }
 
 .right-align {
